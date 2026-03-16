@@ -129,7 +129,7 @@ export default () => (
     {/* CC pull-downs — 5.1k to GND
         Placed at Y=-18, 7mm below J1 center. 14mm apart in X. */}
     <resistor name="R_CC1" resistance="5.1k" footprint="0603"
-      pcbX={-7} pcbY={-18}
+      pcbX={-4} pcbY={-18}
       connections={{ pin1: ".J1 > .CC1", pin2: "net.GND" }}
     />
     <resistor name="R_CC2" resistance="5.1k" footprint="0603"
@@ -227,7 +227,7 @@ export default () => (
       connections={{ pos: "net.V3_3", neg: "net.GND" }}
     />
     <capacitor name="C_BULK" capacitance="10uF" footprint="0805"
-      pcbX={17} pcbY={-8}
+      pcbX={18} pcbY={-2}
       connections={{ pos: "net.V3_3", neg: "net.GND" }}
     />
 
@@ -302,11 +302,11 @@ export default () => (
         R_BOOT at (12, 8): right side, below midline — 2mm from stampboard edge
         C_ESP_DEC at (-12, -7): left side — 5mm from stampboard edge */}
     <resistor name="R_EN" resistance="10k" footprint="0603"
-      pcbX={12} pcbY={-7}
+      pcbX={12} pcbY={-5}
       connections={{ pin1: "net.V3_3", pin2: ".U1 > .EN" }}
     />
     <capacitor name="C_EN" capacitance="1uF" footprint="0603"
-      pcbX={16} pcbY={-7}
+      pcbX={16} pcbY={-5}
       connections={{ pos: ".U1 > .EN", neg: "net.GND" }}
     />
     <resistor name="R_BOOT" resistance="10k" footprint="0603"
@@ -314,7 +314,7 @@ export default () => (
       connections={{ pin1: "net.V3_3", pin2: ".U1 > .IO9" }}
     />
     <capacitor name="C_ESP_DEC" capacitance="100nF" footprint="0603"
-      pcbX={-12} pcbY={-7}
+      pcbX={-12} pcbY={-5}
       connections={{ pos: "net.V3_3", neg: "net.GND" }}
     />
 
@@ -413,7 +413,7 @@ export default () => (
       name="SW_RST"
       footprint="pushbutton_id1.3mm_od2mm"
       pcbX={16}
-      pcbY={19}
+      pcbY={16}
       pinLabels={{ pin1: "A", pin2: "B" }}
       connections={{ A: ".U1 > .EN", B: "net.GND" }}
     />
